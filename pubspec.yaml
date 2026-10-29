@@ -1,0 +1,43 @@
+name: radios_peru_mix
+description: "Radios Perú Mix: directorio y reproductor de radios del Perú en vivo."
+publish_to: 'none'
+
+# versionName+versionCode (Android) / CFBundleShortVersionString+CFBundleVersion (iOS)
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Motor de audio, metadatos ICY y audio en segundo plano
+  just_audio: ^0.10.6
+  audio_service: ^0.18.19
+  # Peticiones de red (JSON de GitHub y Radio Browser API)
+  http: ^1.6.0
+  # Favoritos y preferencias en el dispositivo
+  shared_preferences: ^2.5.6
+  # Gestión de estado
+  provider: ^6.1.5+1
+  # Compartir y enlaces profundos
+  share_plus: ^13.3.1
+  app_links: ^7.2.2
+  # Caché de logos
+  cached_network_image: ^4.0.5
+  # Monetización preparada (desactivada en v1.0, ver AppConstants.enableAds)
+  google_mobile_ads: ^9.2.0
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/radios_peru.json

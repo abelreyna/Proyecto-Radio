@@ -1,0 +1,432 @@
+[
+  {
+    "id": "pe_rpp_lima",
+    "nombre": "RPP Noticias",
+    "frecuencia": "89.7 FM",
+    "region": "Lima",
+    "genero": "Noticias",
+    "url_stream": "https://mdstrm.com/audio/5fab3416b5f9ef165cfab6e9/icecast.audio",
+    "url_logo": "https://mds.rpp-noticias.io/static/img/favicons/apple-touch-icon-120x120.png",
+    "es_destacada": true
+  },
+  {
+    "id": "pe_exitosa_lima",
+    "nombre": "Exitosa",
+    "frecuencia": "95.5 FM",
+    "region": "Lima",
+    "genero": "Noticias",
+    "url_stream": "https://neptuno-2-audio.mediaserver.digital/79525baf-b0f5-4013-a8bd-3c5c293c6561",
+    "url_logo": "https://statics.exitosanoticias.pe/exitosa/img/global/favicon.png",
+    "es_destacada": true
+  },
+  {
+    "id": "pe_nacional_lima",
+    "nombre": "Radio Nacional",
+    "frecuencia": "103.9 FM",
+    "region": "Lima",
+    "genero": "Noticias",
+    "url_stream": "http://cdnhd.iblups.com/hls/0773874174fd4eba8bb9eff741d190dc.m3u8",
+    "url_logo": "https://i.postimg.cc/gk7s9W1x/c5a662543f027e7b04c06fc6723d67f4.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_pbo_lima",
+    "nombre": "PBO Radio",
+    "frecuencia": "",
+    "region": "Lima",
+    "genero": "Noticias",
+    "url_stream": "https://n06.radiojar.com/2fse67zuv8hvv",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_oxigeno_lima",
+    "nombre": "Radio Oxígeno",
+    "frecuencia": "102.1 FM",
+    "region": "Lima",
+    "genero": "Rock & Pop",
+    "url_stream": "https://mdstrm.com/audio/5fab0687bcd6c2389ee9480c/icecast.audio",
+    "url_logo": "https://graph.facebook.com/RadioOxigenoFM/picture?width=200&height=200",
+    "es_destacada": true
+  },
+  {
+    "id": "pe_studio92_lima",
+    "nombre": "Studio 92",
+    "frecuencia": "92.5 FM",
+    "region": "Lima",
+    "genero": "Rock & Pop",
+    "url_stream": "https://mdstrm.com/audio/5fada553978fe1080e3ac5ea/icecast.audio",
+    "url_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Logostudio92.png/225px-Logostudio92.png",
+    "es_destacada": true
+  },
+  {
+    "id": "pe_magica_lima",
+    "nombre": "Radio Mágica",
+    "frecuencia": "88.3 FM",
+    "region": "Lima",
+    "genero": "Rock & Pop",
+    "url_stream": "https://mdstrm.com/audio/6839e28eb3fdc597ac2e2e43/icecast.audio",
+    "url_logo": "https://mmo.aiircdn.com/766/64637f9984614.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_zrockpop_lima",
+    "nombre": "Z Rock & Pop",
+    "frecuencia": "",
+    "region": "Lima",
+    "genero": "Rock & Pop",
+    "url_stream": "https://radioz.egostreaming.pe/radio/3e4f6a1b2c3d4e567890abcd/",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_moda_lima",
+    "nombre": "Radio Moda",
+    "frecuencia": "97.3 FM",
+    "region": "Lima",
+    "genero": "Urbano",
+    "url_stream": "https://mdstrm.com/audio/6839e1c82cc4c480fcd318dd/icecast.audio",
+    "url_logo": "https://static-media.streema.com/media/cache/96/c3/96c30e7a59031307d30f29c426f20a37.png",
+    "es_destacada": true
+  },
+  {
+    "id": "pe_ondacero_lima",
+    "nombre": "Onda Cero",
+    "frecuencia": "98.1 FM",
+    "region": "Lima",
+    "genero": "Urbano",
+    "url_stream": "https://mdstrm.com/audio/6598b65ab398c90871aff8cc/icecast.audio",
+    "url_logo": "https://i1.sndcdn.com/avatars-000035616174-q7tb9i-t240x240.jpg",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_karibena_lima",
+    "nombre": "La Karibeña",
+    "frecuencia": "104.3 FM",
+    "region": "Lima",
+    "genero": "Cumbia",
+    "url_stream": "https://karibena.egostreaming.pe/radio/6898b6e52d9e088a6de159/",
+    "url_logo": "",
+    "es_destacada": true
+  },
+  {
+    "id": "pe_lamega_lima",
+    "nombre": "Radio La Mega",
+    "frecuencia": "",
+    "region": "Lima",
+    "genero": "Cumbia",
+    "url_stream": "https://mdstrm.com/audio/5fada56fe4e09508207a7951/icecast.audio",
+    "url_logo": "https://eaudioplayer.radio-grpp.io/static/dist/img/favicons/apple-touch-icon.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_nuevaq_lima",
+    "nombre": "Nueva Q",
+    "frecuencia": "107.1 FM",
+    "region": "Lima",
+    "genero": "Cumbia",
+    "url_stream": "https://mdstrm.com/audio/6839e1f153fcf56d988d5943/icecast.audio",
+    "url_logo": "https://mmo.aiircdn.com/766/65031e32c1e74.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_lakalle_lima",
+    "nombre": "La Kalle",
+    "frecuencia": "96.1 FM",
+    "region": "Lima",
+    "genero": "Cumbia",
+    "url_stream": "https://lakalle.egostreaming.pe/radio/a7b9c3e4567f8d0123456789/",
+    "url_logo": "https://cdn.instant.audio/images/logos/radios-com-pe/kalle.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_panamericana_lima",
+    "nombre": "Radio Panamericana",
+    "frecuencia": "101.1 FM",
+    "region": "Lima",
+    "genero": "Salsa",
+    "url_stream": "https://mdstrm.com/audio/6598b62dded1380470f4e539/icecast.audio",
+    "url_logo": "https://static-media.streema.com/media/cache/88/74/8874c7e02e56f56b4d18607b234c95ba.jpg",
+    "es_destacada": true
+  },
+  {
+    "id": "pe_radiomar_lima",
+    "nombre": "Radiomar",
+    "frecuencia": "106.3 FM",
+    "region": "Lima",
+    "genero": "Salsa",
+    "url_stream": "https://mdstrm.com/audio/6839e261d2efddf5bfbc2d3d/icecast.audio",
+    "url_logo": "http://radiomar.pe/assets/images/imagen-Radiomar-enVivo.jpg",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_salsamaestra",
+    "nombre": "La Salsa Maestra",
+    "frecuencia": "",
+    "region": "Lima",
+    "genero": "Salsa",
+    "url_stream": "https://stream.zeno.fm/c1skkw28pfeuv",
+    "url_logo": "https://i.imgur.com/rMKkm0b.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_ritmo_lima",
+    "nombre": "Ritmo Romántica",
+    "frecuencia": "93.9 FM",
+    "region": "Lima",
+    "genero": "Baladas",
+    "url_stream": "https://mdstrm.com/audio/6839e2376607bdf6b2fcde27/icecast.audio",
+    "url_logo": "https://mmo.aiircdn.com/766/6a97035cd37a8910818.png",
+    "es_destacada": true
+  },
+  {
+    "id": "pe_corazon_lima",
+    "nombre": "Radio Corazón",
+    "frecuencia": "94.3 FM",
+    "region": "Lima",
+    "genero": "Baladas",
+    "url_stream": "https://mdstrm.com/audio/5fada514fc16c006bd63370f/icecast.audio",
+    "url_logo": "https://eaudioplayer.radio-grpp.io/static/dist/img/favicons/apple-touch-icon.png?v=2016063020297",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_felicidad_lima",
+    "nombre": "Radio Felicidad",
+    "frecuencia": "88.9 FM",
+    "region": "Lima",
+    "genero": "Baladas",
+    "url_stream": "https://mdstrm.com/audio/5fad731fcf097a068af3c8f7/icecast.audio",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_inolvidable_lima",
+    "nombre": "La Inolvidable",
+    "frecuencia": "93.7 FM",
+    "region": "Lima",
+    "genero": "Baladas",
+    "url_stream": "https://mdstrm.com/audio/6839e24cf4eacd81ada4e6b4/icecast.audio",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_folkperu",
+    "nombre": "Radio Folk Perú",
+    "frecuencia": "",
+    "region": "Lima",
+    "genero": "Folklore",
+    "url_stream": "http://live.radiofolkperu.com/listen/radiofolkperu/radio.mp3",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_perufolk_trujillo",
+    "nombre": "Perú Folk Radio",
+    "frecuencia": "",
+    "region": "La Libertad",
+    "genero": "Folklore",
+    "url_stream": "https://raymistream.net/listen/perufolkradio/live",
+    "url_logo": "https://perufolkradio.com/wp-content/uploads/2020/06/cropped-pfr512-180x180.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_peruandino",
+    "nombre": "Radio Perú Andino",
+    "frecuencia": "",
+    "region": "Lima",
+    "genero": "Folklore",
+    "url_stream": "https://stream.zeno.fm/sv5a3s8waxtuv",
+    "url_logo": "https://cdn.onlineradiobox.com/img/l/5/144975.v5.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_melodia_arequipa",
+    "nombre": "Radio Melodía",
+    "frecuencia": "",
+    "region": "Arequipa",
+    "genero": "Variado",
+    "url_stream": "http://stream.radiomelodia.com.pe:8000/radio.mp3",
+    "url_logo": "https://static-media.streema.com/media/cache/aa/5b/aa5be888d41f0aa82ba13804d1ad1ab3.jpg",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_yaravi_arequipa",
+    "nombre": "Radio Yaraví",
+    "frecuencia": "",
+    "region": "Arequipa",
+    "genero": "Noticias",
+    "url_stream": "https://tupanel.info/stream/radioyaravi/stream",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_jr_arequipa",
+    "nombre": "Radio JR",
+    "frecuencia": "88.7 FM",
+    "region": "Arequipa",
+    "genero": "Rock & Pop",
+    "url_stream": "https://tupanel.info:2000/stream/radiojr/stream",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_salkantay_cusco",
+    "nombre": "Radio Salkantay",
+    "frecuencia": "",
+    "region": "Cusco",
+    "genero": "Variado",
+    "url_stream": "https://stream.radiosalkantaycusco.com/7662/stream",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_ram_cusco",
+    "nombre": "RAM Cusco",
+    "frecuencia": "",
+    "region": "Cusco",
+    "genero": "Variado",
+    "url_stream": "https://stream.laut.fm/ramcusco",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_girasol_piura",
+    "nombre": "Radio Girasol",
+    "frecuencia": "",
+    "region": "Piura",
+    "genero": "Variado",
+    "url_stream": "https://miradioperu.com/8008/stream",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_frecuencia100_trujillo",
+    "nombre": "Frecuencia 100",
+    "frecuencia": "",
+    "region": "La Libertad",
+    "genero": "Variado",
+    "url_stream": "http://oyotunstream.com:7066/;",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_fuego_chiclayo",
+    "nombre": "Radio Fuego",
+    "frecuencia": "",
+    "region": "Lambayeque",
+    "genero": "Variado",
+    "url_stream": "https://sp.onliveperu.com/8128/stream",
+    "url_logo": "https://www.estacionesfm.com/imgfm/imgfm/radio_fuego_4x4x4x.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_jhc_lambayeque",
+    "nombre": "Radio JHC",
+    "frecuencia": "107.7 FM",
+    "region": "Lambayeque",
+    "genero": "Variado",
+    "url_stream": "https://sp.oyotunstream.com:10979/;",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_nova_chimbote",
+    "nombre": "Radio Nova Chimbote",
+    "frecuencia": "",
+    "region": "Áncash",
+    "genero": "Cumbia",
+    "url_stream": "https://panel.innovatestream.pe:10990/undefined",
+    "url_logo": "https://i0.wp.com/radionova.pe/wp-content/uploads/2022/08/cropped-LOGO-4-2048x1365-11.png?fit=500%2C226&ssl=1",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_huancayo",
+    "nombre": "Radio Huancayo",
+    "frecuencia": "",
+    "region": "Junín",
+    "genero": "Variado",
+    "url_stream": "https://cloud9.ldwebstudios.net:7000/;",
+    "url_logo": "https://cdn-profiles.tunein.com/s345558/images/logog.png?t=3",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_1550_huancayo",
+    "nombre": "Radio 1550",
+    "frecuencia": "88.9 FM",
+    "region": "Junín",
+    "genero": "Variado",
+    "url_stream": "https://streaming.virtugo.digital:8002/stream",
+    "url_logo": "https://radio1550.com/uploads/logos/OoHiata9WQe3kOtMknIyFji88wmeIsmFWDBb4ZHq.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_titanka_abancay",
+    "nombre": "Radio Titanka",
+    "frecuencia": "",
+    "region": "Apurímac",
+    "genero": "Noticias",
+    "url_stream": "http://servistream.info:8482/stream",
+    "url_logo": "https://radiotitanka.pe/imgs/titanka_logo.png",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_surena_puno",
+    "nombre": "Radio TV Sureña",
+    "frecuencia": "",
+    "region": "Puno",
+    "genero": "Variado",
+    "url_stream": "https://stream.zeno.fm/p7d5fpx4xnhvv",
+    "url_logo": "https://cdn.radoxo.com/images/peru/radio-tv-surena.webp",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_loreto",
+    "nombre": "Radio Loreto",
+    "frecuencia": "",
+    "region": "Loreto",
+    "genero": "Variado",
+    "url_stream": "https://sp.oyotunstream.com/8006/stream",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_andina_tarata",
+    "nombre": "Radio Andina Tarata",
+    "frecuencia": "",
+    "region": "Tacna",
+    "genero": "Noticias",
+    "url_stream": "http://sp.oyotunstream.com:8064/",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_gama_moquegua",
+    "nombre": "Stereo Gama",
+    "frecuencia": "",
+    "region": "Moquegua",
+    "genero": "Rock & Pop",
+    "url_stream": "https://stream.zeno.fm/nf615ybey98uv",
+    "url_logo": "",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_pirata_cajamarca",
+    "nombre": "Radio Pirata",
+    "frecuencia": "97.7 FM",
+    "region": "Cajamarca",
+    "genero": "Rock & Pop",
+    "url_stream": "https://panel.innovatestream.pe:10995/stream",
+    "url_logo": "https://i.imgur.com/LYPXqYR.jpeg",
+    "es_destacada": false
+  },
+  {
+    "id": "pe_esfera_sanmartin",
+    "nombre": "Radio Esfera",
+    "frecuencia": "",
+    "region": "San Martín",
+    "genero": "Variado",
+    "url_stream": "https://mediastreamm.com/8202/stream/;",
+    "url_logo": "",
+    "es_destacada": false
+  }
+]
