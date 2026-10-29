@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
 import 'core/constants.dart';
@@ -21,10 +20,6 @@ Future<void> main() async {
   final storage = await StorageService.create();
   // Servicio de audio en segundo plano (notificación y pantalla de bloqueo).
   final audioHandler = await RadioAudioHandler.init();
-
-  if (AppConstants.enableAds) {
-    unawaited(MobileAds.instance.initialize());
-  }
 
   final provider = RadioProvider(
     api: RadioApiService(storage: storage),

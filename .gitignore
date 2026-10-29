@@ -46,3 +46,11 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Paquete y video para Google Play (pesados; se regeneran)
+/play_store/*.aab
+/play_store/*.mp4
+
+# Claves de firma: nunca subirlas
+*.jks
+*.keystore

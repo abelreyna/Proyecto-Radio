@@ -1,4 +1,4 @@
-package com.radiosperumix.radios_peru_mix
+package com.radiosperumix.app
 
 import com.ryanheise.audioservice.AudioServiceActivity
 

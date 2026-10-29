@@ -40,7 +40,7 @@ abstract final class AppConstants {
   // Compartir y enlaces profundos
   // ---------------------------------------------------------------------------
 
-  static const String androidPackageId = 'com.radiosperumix.radios_peru_mix';
+  static const String androidPackageId = 'com.radiosperumix.app';
   static const String playStoreUrl =
       'https://play.google.com/store/apps/details?id=$androidPackageId';
 
@@ -57,16 +57,9 @@ abstract final class AppConstants {
   // Monetización (AdMob)
   // ---------------------------------------------------------------------------
 
-  /// Interruptor de anuncios. En la v1.0 la app sale sin publicidad; al
-  /// cambiarlo a `true` se inicializa AdMob y se muestran los banners.
+  /// Interruptor de anuncios. La v1.0 sale sin publicidad y sin el SDK de
+  /// AdMob; el README explica cómo agregarlo y activar los banners.
   static const bool enableAds = false;
-
-  /// IDs de bloque de anuncios **de prueba** de Google. Reemplazarlos por los
-  /// reales de la cuenta de AdMob antes de activar [enableAds] en producción.
-  static const String androidBannerAdUnitId =
-      'ca-app-pub-3940256099942544/6300978111';
-  static const String iosBannerAdUnitId =
-      'ca-app-pub-3940256099942544/2934735716';
 
   // ---------------------------------------------------------------------------
   // Reproductor

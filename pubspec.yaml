@@ -28,16 +28,38 @@ dependencies:
   app_links: ^7.2.2
   # Caché de logos
   cached_network_image: ^4.0.5
-  # Monetización preparada (desactivada en v1.0, ver AppConstants.enableAds)
-  google_mobile_ads: ^9.2.0
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
 
 flutter:
   uses-material-design: true
   assets:
     - assets/data/radios_peru.json
+
+# Íconos de la app: dart run flutter_launcher_icons
+# (las imágenes se regeneran con tool/generar_graficos.ps1)
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/icon/icon.png
+  adaptive_icon_background: "#D91023"
+  adaptive_icon_foreground: assets/icon/icon_foreground.png
+  adaptive_icon_monochrome: assets/icon/icon_foreground.png
+  remove_alpha_ios: true
+  min_sdk_android: 24
+
+# Pantalla de carga: dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#D91023"
+  image: assets/icon/splash.png
+  android_12:
+    color: "#D91023"
+    image: assets/icon/splash_android12.png
+  android: true
+  ios: true

@@ -14,7 +14,7 @@ La especificación completa está en [documentacion_proyecto_radio.md](documenta
 - **Temporizador de apagado** de 15, 30, 45 o 60 minutos.
 - **Tema claro, oscuro o según el sistema**. El modo oscuro usa negro puro para ahorrar batería en pantallas OLED.
 - **Compartir** la app o la emisora actual. El enlace `radiosperumix://station/<id>` abre la app reproduciendo esa emisora.
-- **AdMob preparado** y desactivado en la v1.0 (`AppConstants.enableAds = false`).
+- **Espacio para anuncios reservado**: la v1.0 sale sin publicidad y sin el SDK de AdMob (ver [Activar anuncios](#activar-anuncios-admob)).
 
 ## Requisitos
 
@@ -73,10 +73,32 @@ https://raw.githubusercontent.com/abelreyna/Proyecto-Radio/main/assets/data/radi
 
 Campos de cada emisora: `id` (único), `nombre`, `frecuencia`, `region` (departamento), `genero` (Noticias, Deportes, Cumbia, Salsa, Rock & Pop, Folklore, Baladas, Urbano o Variado), `url_stream`, `url_logo` y `es_destacada`.
 
-## Antes de publicar en las tiendas
+## Publicar en Google Play
 
-- [ ] Ícono de la aplicación y pantalla de carga (*splash screen*).
-- [ ] Firma de *release* para Android (`android/app/build.gradle.kts`) y equipo de firma en Xcode.
-- [ ] `AppConstants.appStoreUrl` con el enlace de App Store una vez publicada en iOS.
-- [ ] Para activar anuncios: crear la cuenta de AdMob, reemplazar los IDs **de prueba** en `lib/core/constants.dart`, `AndroidManifest.xml` e `Info.plist`, y cambiar `enableAds` a `true`.
-- [ ] La app incluye el SDK de Google Mobile Ads, que agrega el permiso de ID de publicidad. En Play Console declara su uso, o quita el paquete `google_mobile_ads` si la v1.0 sale sin anuncios.
+- Identificador de la app: `com.radiosperumix.app`. No se puede cambiar una vez publicada.
+- La guía paso a paso, la ficha de la tienda y los gráficos están en [play_store/](play_store/GUIA_PUBLICACION.md).
+- **Firma:** `tool/crear_clave_subida.ps1` crea la clave de subida en `C:\Users\ADMIN\keys\` y escribe `android/key.properties`. Ninguno de los dos se sube a GitHub. Sin `key.properties`, la versión de release se firma con la clave de depuración.
+- **Paquete para Play:**
+  ```bash
+  flutter build appbundle --release
+  ```
+  El archivo queda en `build/app/outputs/bundle/release/app-release.aab`.
+- **Ícono, pantalla de carga y gráficos:** `tool/generar_graficos.ps1` dibuja las imágenes. Después, `dart run flutter_launcher_icons` y `dart run flutter_native_splash:create` las aplican a Android e iOS.
+- **R8:** `android/app/proguard-rules.pro` conserva las clases de los plugins de audio. Sin esas reglas, la radio suena pero no aparece la notificación con los controles y Android puede cerrar la app en segundo plano.
+- **Política de privacidad:** `docs/privacidad.html`, publicada con GitHub Pages desde la carpeta `/docs`.
+
+## Pendiente para iOS
+
+- Equipo de firma en Xcode y publicación en App Store.
+- Reemplazar `AppConstants.appStoreUrl` por el enlace de App Store cuando la app esté publicada.
+
+## Activar anuncios (AdMob)
+
+1. Agrega el SDK:
+   ```bash
+   flutter pub add google_mobile_ads
+   ```
+2. Agrega el ID de aplicación de AdMob en `AndroidManifest.xml` (`<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" .../>`) y en `Info.plist` (`GADApplicationIdentifier`).
+3. En `main.dart`, inicializa con `MobileAds.instance.initialize()`. En `lib/ui/widgets/ad_space.dart`, carga un `BannerAd` y muéstralo con `AdWidget`.
+4. Cambia `AppConstants.enableAds` a `true`.
+5. Actualiza la política de privacidad y la sección de anuncios y datos en Play Console.

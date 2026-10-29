@@ -54,14 +54,14 @@ class RadioAudioHandler extends BaseAudioHandler implements RadioPlayer {
     return AudioService.init(
       builder: RadioAudioHandler.new,
       config: const AudioServiceConfig(
-        androidNotificationChannelId:
-            'com.radiosperumix.radios_peru_mix.audio',
+        androidNotificationChannelId: 'com.radiosperumix.app.audio',
         androidNotificationChannelName: 'Reproducción de radio',
         androidNotificationChannelDescription:
             'Controles de la emisora que se está escuchando',
-        // Mantiene el servicio en primer plano durante la pausa para poder
-        // reanudar desde la notificación en Android 12 o superior.
-        androidStopForegroundOnPause: false,
+        // Se usan los valores por defecto de androidStopForegroundOnPause (true)
+        // y androidNotificationOngoing (false): al pausar o detener, el servicio
+        // sale de primer plano y la notificación se puede descartar deslizándola.
+        // Con otros valores quedaba fija tras pulsar Detener.
       ),
     );
   }
@@ -261,12 +261,14 @@ class RadioAudioHandler extends BaseAudioHandler implements RadioPlayer {
     }
   }
 
-  /// Limpia el título ICY: descarta valores vacíos, genéricos o iguales al
-  /// nombre de la emisora.
+  /// Limpia el título ICY: descarta valores vacíos, genéricos, iguales al
+  /// nombre de la emisora o códigos internos sin espacios (algunas emisoras
+  /// envían, por ejemplo, "GRPP-OXIGENO" en lugar de la canción).
   @visibleForTesting
   static String? cleanIcyTitle(String? raw, String? stationName) {
     final title = raw?.trim() ?? '';
     if (title.isEmpty || title == '-' || title.length < 3) return null;
+    if (!title.contains(' ')) return null;
     final lower = title.toLowerCase();
     if (stationName != null && lower == stationName.trim().toLowerCase()) {
       return null;
