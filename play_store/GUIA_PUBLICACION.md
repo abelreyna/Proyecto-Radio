@@ -21,10 +21,11 @@ Todo lo que hay que subir está en esta carpeta (`play_store/`). Los pasos marca
 
 ## 2. 🔒 Activar la política de privacidad (GitHub Pages)
 
-1. En `docs/privacidad.html`, reemplaza `NOMBRE_DEL_DESARROLLADOR` por tu nombre tal como aparecerá en Google Play, y sube el cambio.
-2. En GitHub: **Settings → General → Danger Zone → Change visibility → Public**.
-3. En GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / carpeta `/docs` → Save**.
-4. En unos minutos la política estará en:
+La política (`docs/privacidad.html`) ya nombra como responsable a **Juan Abel Reyna Gonzales**. Usa ese mismo nombre como nombre de desarrollador en Google Play; si cambia, actualízalo también en la política.
+
+1. En GitHub: **Settings → General → Danger Zone → Change visibility → Public**.
+2. En GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / carpeta `/docs` → Save**.
+3. En unos minutos la política estará en:
    **<https://abelreyna.github.io/Proyecto-Radio/privacidad.html>**
 
 Al hacer público el repositorio, la app también empieza a descargar el catálogo `assets/data/radios_peru.json` desde GitHub, así que puedes agregar o corregir emisoras sin publicar una actualización.
