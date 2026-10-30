@@ -83,7 +83,8 @@ Campos de cada emisora: `id` (único), `nombre`, `frecuencia`, `region` (departa
   flutter build appbundle --release
   ```
   El archivo queda en `build/app/outputs/bundle/release/app-release.aab`.
-- **Ícono, pantalla de carga y gráficos:** `tool/generar_graficos.ps1` dibuja las imágenes. Después, `dart run flutter_launcher_icons` y `dart run flutter_native_splash:create` las aplican a Android e iOS.
+- **Ícono y pantalla de carga:** `tool/generar_graficos.ps1` dibuja las imágenes. Después, `dart run flutter_launcher_icons` y `dart run flutter_native_splash:create` las aplican a Android e iOS.
+- **Capturas e imagen destacada de la ficha:** `tool/generar_promo.ps1` combina las capturas reales de `play_store/capturas_app/` con los textos de `tool/promo_textos.json`.
 - **R8:** `android/app/proguard-rules.pro` conserva las clases de los plugins de audio. Sin esas reglas, la radio suena pero no aparece la notificación con los controles y Android puede cerrar la app en segundo plano.
 - **Política de privacidad:** `docs/privacidad.html`, publicada con GitHub Pages desde la carpeta `/docs`.
 

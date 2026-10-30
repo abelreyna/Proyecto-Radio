@@ -1,0 +1,37 @@
+{
+  "imagenDestacada": {
+    "titulo": "Radios Perú Mix",
+    "lema": "Cientos de radios del Perú en vivo, gratis y sin registro",
+    "chips": ["Noticias", "Cumbia", "Salsa", "Rock & Pop"],
+    "capturaFrente": "01-inicio",
+    "capturaAtras": "03-reproductor"
+  },
+  "capturas": [
+    {
+      "captura": "01-inicio",
+      "titulo": "Todas las radios\ndel Perú",
+      "subtitulo": "Cientos de emisoras nacionales y regionales en vivo",
+      "chips": ["Gratis", "Sin registro", "Sin anuncios"]
+    },
+    {
+      "captura": "02-filtros",
+      "titulo": "Encuentra tu radio\nal toque",
+      "subtitulo": "Busca por nombre o frecuencia y filtra por región o género"
+    },
+    {
+      "captura": "03-reproductor",
+      "titulo": "Mira qué está\nsonando",
+      "subtitulo": "Canción y artista en tiempo real, con temporizador para dormir"
+    },
+    {
+      "captura": "04-favoritos",
+      "titulo": "Tus favoritas\na un toque",
+      "subtitulo": "Guárdalas sin crear cuentas y sigue escuchando con la pantalla apagada"
+    },
+    {
+      "captura": "05-modo-claro",
+      "titulo": "Modo claro\no modo oscuro",
+      "subtitulo": "Elige el tema que prefieras; el oscuro ahorra batería"
+    }
+  ]
+}

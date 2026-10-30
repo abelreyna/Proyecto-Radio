@@ -7,7 +7,14 @@ Todo lo que hay que subir está en esta carpeta (`play_store/`). Los pasos marca
 | `app-release.aab` | El paquete de la app que se sube a Play (se genera con `flutter build appbundle`) |
 | `icon-512.png` | Ícono de la ficha (512 × 512) |
 | `feature-graphic.png` | Imagen destacada (1024 × 500) |
-| `screenshots/*.png` | Capturas de teléfono (1215 × 2160, proporción 9:16 que exige Play) |
+| `screenshots/*.png` | Capturas promocionales de teléfono (1080 × 1920, proporción 9:16 que exige Play) |
+| `capturas_app/*.png` | Capturas reales de la app (1080 × 2160) con las que se arman las promocionales |
+
+Las capturas promocionales y la imagen destacada se generan con `tool/generar_promo.ps1`; los títulos están en `tool/promo_textos.json`. Para actualizarlas, reemplaza las capturas de `capturas_app/` y vuelve a ejecutar:
+
+```
+powershell -ExecutionPolicy Bypass -File tool\generar_promo.ps1
+```
 
 ---
 

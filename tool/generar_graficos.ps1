@@ -7,7 +7,8 @@
 #   assets/icon/splash.png           768x768,   logo de la pantalla de carga
 #   assets/icon/splash_android12.png 1152x1152, ídem para Android 12 o superior
 #   play_store/icon-512.png          512x512,   ícono de la ficha de Play
-#   play_store/feature-graphic.png   1024x500,  imagen destacada de Play
+#
+# La imagen destacada y las capturas de la ficha las genera tool/generar_promo.ps1.
 
 Add-Type -AssemblyName System.Drawing
 $ErrorActionPreference = 'Stop'
@@ -117,22 +118,3 @@ Save-Png (New-GlyphBitmap 768 0.66) 'assets/icon/splash.png'
 # Android 12+ recorta el logo de la pantalla de carga en un círculo de 768 px.
 Save-Png (New-GlyphBitmap 1152 0.47) 'assets/icon/splash_android12.png'
 Save-Png (New-FullIcon 512) 'play_store/icon-512.png'
-
-# Imagen destacada 1024x500: ícono a la izquierda, nombre y lema a la derecha.
-$fg = New-Object System.Drawing.Bitmap(1024, 500, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
-$g = New-Graphics $fg
-Fill-Background $g 1024 500
-$glyph = New-GlyphBitmap 420 0.80
-$g.DrawImage($glyph, 50, 40, 420, 420)
-$glyph.Dispose()
-$titleFont = New-Object System.Drawing.Font('Segoe UI', 64, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
-$subFont = New-Object System.Drawing.Font('Segoe UI', 32, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
-$textBrush = New-Object System.Drawing.SolidBrush($white)
-$softBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(230, 255, 255, 255))
-# "Perú" con la ú escrita por código: PowerShell 5.1 lee este archivo como ANSI.
-$peru = "Per$([char]0x00FA)"
-$g.DrawString('Radios', $titleFont, $textBrush, 490, 120)
-$g.DrawString("$peru Mix", $titleFont, $textBrush, 490, 195)
-$g.DrawString("Las radios del $peru en vivo", $subFont, $softBrush, 494, 300)
-$g.Dispose()
-Save-Png $fg 'play_store/feature-graphic.png'

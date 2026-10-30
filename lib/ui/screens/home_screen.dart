@@ -30,11 +30,7 @@ class HomeScreen extends StatelessWidget {
               Flexible(child: Text(AppConstants.appName)),
             ],
           ),
-          actions: const [
-            _ThemeMenuButton(),
-            _ShareAppButton(),
-            _MoreMenuButton(),
-          ],
+          actions: const [_ThemeMenuButton(), _MoreMenuButton()],
           bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.cell_tower_rounded), text: 'Emisoras'),
@@ -98,25 +94,12 @@ class _ThemeMenuButton extends StatelessWidget {
   }
 }
 
-class _ShareAppButton extends StatelessWidget {
-  const _ShareAppButton();
+enum _MoreAction { share, privacy, about }
 
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      tooltip: 'Compartir la app',
-      icon: const Icon(Icons.share_outlined),
-      onPressed: () => context
-          .read<ShareService>()
-          .shareApp(origin: shareOriginOf(context)),
-    );
-  }
-}
-
-enum _MoreAction { privacy, about }
-
-/// Menú con la política de privacidad (Google Play exige enlazarla dentro de
-/// la app) y la información de la app con sus licencias.
+/// Menú con compartir la app, la política de privacidad (Google Play exige
+/// enlazarla dentro de la app) y la información de la app con sus licencias.
+/// Van agrupadas para que el título no se corte en pantallas angostas o con
+/// letra grande.
 class _MoreMenuButton extends StatelessWidget {
   const _MoreMenuButton();
 
@@ -126,6 +109,10 @@ class _MoreMenuButton extends StatelessWidget {
       tooltip: 'Más opciones',
       onSelected: (action) {
         switch (action) {
+          case _MoreAction.share:
+            context
+                .read<ShareService>()
+                .shareApp(origin: shareOriginOf(context));
           case _MoreAction.privacy:
             _openPrivacyPolicy(context);
           case _MoreAction.about:
@@ -140,6 +127,13 @@ class _MoreMenuButton extends StatelessWidget {
         }
       },
       itemBuilder: (context) => const [
+        PopupMenuItem(
+          value: _MoreAction.share,
+          child: ListTile(
+            leading: Icon(Icons.share_outlined),
+            title: Text('Compartir la app'),
+          ),
+        ),
         PopupMenuItem(
           value: _MoreAction.privacy,
           child: ListTile(
