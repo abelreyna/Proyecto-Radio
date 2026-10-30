@@ -7,7 +7,7 @@ Todo lo que hay que subir está en esta carpeta (`play_store/`). Los pasos marca
 | `app-release.aab` | El paquete de la app que se sube a Play (se genera con `flutter build appbundle`) |
 | `icon-512.png` | Ícono de la ficha (512 × 512) |
 | `feature-graphic.png` | Imagen destacada (1024 × 500) |
-| `screenshots/*.png` | Capturas de teléfono (1080 × 2160) |
+| `screenshots/*.png` | Capturas de teléfono (1215 × 2160, proporción 9:16 que exige Play) |
 
 ---
 

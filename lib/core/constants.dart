@@ -48,6 +48,11 @@ abstract final class AppConstants {
   /// esté vacío no se incluye en los mensajes de compartir.
   static const String appStoreUrl = '';
 
+  /// Política de privacidad publicada con GitHub Pages (carpeta `docs/`).
+  /// Google Play exige enlazarla en la ficha y dentro de la app.
+  static const String privacyPolicyUrl =
+      'https://abelreyna.github.io/Proyecto-Radio/privacidad.html';
+
   /// Esquema propio: `radiosperumix://station/<id>` abre la app y reproduce la
   /// emisora indicada.
   static const String deepLinkScheme = 'radiosperumix';

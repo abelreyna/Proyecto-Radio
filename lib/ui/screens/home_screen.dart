@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/constants.dart';
 import '../../models/station_model.dart';
@@ -29,7 +30,11 @@ class HomeScreen extends StatelessWidget {
               Flexible(child: Text(AppConstants.appName)),
             ],
           ),
-          actions: const [_ThemeMenuButton(), _ShareAppButton()],
+          actions: const [
+            _ThemeMenuButton(),
+            _ShareAppButton(),
+            _MoreMenuButton(),
+          ],
           bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.cell_tower_rounded), text: 'Emisoras'),
@@ -105,6 +110,65 @@ class _ShareAppButton extends StatelessWidget {
           .read<ShareService>()
           .shareApp(origin: shareOriginOf(context)),
     );
+  }
+}
+
+enum _MoreAction { privacy, about }
+
+/// Menú con la política de privacidad (Google Play exige enlazarla dentro de
+/// la app) y la información de la app con sus licencias.
+class _MoreMenuButton extends StatelessWidget {
+  const _MoreMenuButton();
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<_MoreAction>(
+      tooltip: 'Más opciones',
+      onSelected: (action) {
+        switch (action) {
+          case _MoreAction.privacy:
+            _openPrivacyPolicy(context);
+          case _MoreAction.about:
+            showAboutDialog(
+              context: context,
+              applicationName: AppConstants.appName,
+              applicationIcon: const Icon(Icons.radio_rounded, size: 40),
+              applicationLegalese:
+                  'Directorio independiente de radios del Perú. Los nombres, '
+                  'logos y transmisiones pertenecen a cada emisora.',
+            );
+        }
+      },
+      itemBuilder: (context) => const [
+        PopupMenuItem(
+          value: _MoreAction.privacy,
+          child: ListTile(
+            leading: Icon(Icons.privacy_tip_outlined),
+            title: Text('Política de privacidad'),
+          ),
+        ),
+        PopupMenuItem(
+          value: _MoreAction.about,
+          child: ListTile(
+            leading: Icon(Icons.info_outline),
+            title: Text('Acerca de'),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Future<void> _openPrivacyPolicy(BuildContext context) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final opened = await launchUrl(
+      Uri.parse(AppConstants.privacyPolicyUrl),
+      mode: LaunchMode.externalApplication,
+    );
+    if (!opened) {
+      messenger.showSnackBar(const SnackBar(
+        content: Text('No se pudo abrir ${AppConstants.privacyPolicyUrl}'),
+      ));
+    }
   }
 }
 
