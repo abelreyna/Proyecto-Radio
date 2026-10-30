@@ -21,7 +21,7 @@ Todo lo que hay que subir está en esta carpeta (`play_store/`). Los pasos marca
 
 ## 2. 🔒 Activar la política de privacidad (GitHub Pages)
 
-La política (`docs/privacidad.html`) ya nombra como responsable a **Juan Abel Reyna Gonzales**. Usa ese mismo nombre como nombre de desarrollador en Google Play; si cambia, actualízalo también en la política.
+La política (`docs/privacidad.html`) ya nombra como responsable a **Juan Abel Reyna Gonzales** y al nombre de desarrollador en Google Play, **ABELREYNA**. Si cambias el nombre de desarrollador en Play Console, actualízalo también en la política.
 
 1. En GitHub: **Settings → General → Danger Zone → Change visibility → Public**.
 2. En GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / carpeta `/docs` → Save**.
